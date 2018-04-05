@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>ChatIO</title>
+        <!-- https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js -->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <style>
+            body{
+                margin-top: 30px;
+            }   
+            #messageArea{
+                display:none;
+            } 
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="ui threaded comments">
+              <h3 class="ui dividing header">Messages</h3>
+              <div class="comment">
+                <a class="avatar">
+                  <img src="/images/avatar/small/matt.jpg">
+                </a>
+                <div class="content">
+                  <a class="author">Matt</a>
+                  <div class="metadata">
+                    <span class="date">Today at 5:42PM</span>
+                  </div>
+                  <div class="text">
+                    How artistic!
+                  </div>
+                  <div class="actions">
+                    <a class="reply">Reply</a>
+                  </div>
+                </div>
+              </div>
+              <div class="comment">
+                <a class="avatar">
+                  <img src="/images/avatar/small/elliot.jpg">
+                </a>
+                <div class="content">
+                  <a class="author">Elliot Fu</a>
+                  <div class="metadata">
+                    <span class="date">Yesterday at 12:30AM</span>
+                  </div>
+                  <div class="text">
+                    <p>This has been very useful for my research. Thanks as well!</p>
+                  </div>
+                  <div class="actions">
+                    <a class="reply">Reply</a>
+                  </div>
+                </div>
+               
+                <form class="ui reply form">
+                    <div class="field">
+                      <textarea></textarea>
+                    </div>
+                    <div class="ui blue labeled submit icon button">
+                      <i class="icon edit"></i> Add Reply
+                    </div>
+                </form>
+                </div>
+        </div>
+        <script
+              src="https://code.jquery.com/jquery-3.3.1.min.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+        <script src="/chat.js"></script>
+    </body>

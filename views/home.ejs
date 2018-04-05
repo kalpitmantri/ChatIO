@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Socket.io Chat Application</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+
+        <style>
+            #chat-window{
+                display:none;
+            }
+            #msgForm{
+                display:none;
+            }
+            #onlineuser{
+                display:none;
+                margin:100px 800px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="mario-chat">
+
+            <div id="chat-window">
+
+                <div id="output"></div>
+
+                <div id="feedback"></div>
+            </div>
+            <form id="userForm">
+                <label>Enter Username</label>
+                <input type="text" id="username" placeholder="Handle"><br>
+                <input type="submit" value="Login">
+            </form>
+            <form id="msgForm">
+                <input id="message" type="message" placeholder="Message"/>
+                <input type="submit" value="Send"/>
+            </form>    
+
+        </div>
+        <div id="onlineuser">
+                <h3>Online Users</h3>
+                <ul id="allusers">           
+                </ul> 
+        </div>
+
+        <script
+              src="https://code.jquery.com/jquery-3.3.1.min.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+        <script src="/chat.js"></script>
+
+    </body>
